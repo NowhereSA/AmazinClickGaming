@@ -1,18 +1,21 @@
 .coisasContainer {
-  display: flex;
-  flex-direction: row;
-  align-items: stretch;
-  width: auto;
-  height: auto;
-  flex-wrap: wrap;
+  display: grid;
+  /* Cria 4 colunas iguais. O '1fr' faz elas dividirem o espaço. */
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px; /* Note: adicione 'px', apenas '20' o CSS ignora */
+  width: 100%;
+  max-width: 900px; /* Largura ideal para 4 cards de 200px + gaps */
+  margin: 0 auto; /* Centraliza a loja inteira na tela */
+  padding: 20px;
+  box-sizing: border-box;
 }
 
 .categoryContainer {
   background-color: #1c1c1c;
-  margin-left: 10px;
+  /* Removi o margin-left para não quebrar o alinhamento do Grid */
   border-radius: 5px;
+  padding: 10px;
 }
-
 .itens div {
   margin: 10px;
 }
@@ -20,4 +23,26 @@
 .titleItem {
   text-align: center;
   color: aqua;
+}
+
+.rerollBtn {
+  background: #1c1c1c;
+  color: #00a8e8;
+  border: 2px solid #00a8e8;
+  padding: 8px 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+  font-family: "Press Start 2P", cursive; /* Se estiver usando fonte gamer */
+  font-size: 0.7rem;
+}
+
+.rerollBtn:hover {
+  background: #00a8e8;
+  color: #fff;
+  box-shadow: 0 0 10px #00a8e8;
+}
+
+.rerollBtn:active {
+  transform: scale(0.95);
 }

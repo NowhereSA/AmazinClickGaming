@@ -1,33 +1,73 @@
-.cardItem,
-.cardBuyed {
-  border: 3px solid rgb(26, 139, 180);
-  box-shadow: 0 0 5px rgba(26, 139, 180, 0.4);
-  border-radius: 10px;
-  text-align: center;
-}
-.cardItem,
-.cardBuyed {
-  height: 200px;
+.baseCard {
+  height: 220px;
   width: 200px;
-}
-
-.button,
-.isBuyed {
+  border-radius: 10px;
+  padding: 10px;
+  overflow: hidden;
   display: flex;
-  justify-content: center;
-}
-.button p {
-  color: #00a8e8;
-}
-
-.cardBuyed {
-  background-color: rgba(51, 47, 47, 0.76);
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  transition: 0.3s;
 }
 
-.cardBuyed p {
-  color: antiquewhite;
+.baseCard:hover {
+  transform: translateY(-5px);
+}
+.commom {
+  background-color: #1c1c1c;
+  border: 3px solid rgb(26, 139, 180);
+}
+.uncommom {
+  background-color: rgba(46, 204, 112, 0.26);
+  border: 3px solid rgba(46, 204, 112, 0.555);
+}
+
+.rare {
+  border-color: #ffcc00;
+  background-color: #d3bc5f44;
+  border: 3px solid #ffcc00;
+}
+
+.legendary {
+  border-color: #a335ee;
+  box-shadow: 0 0 15px rgba(163, 53, 238, 0.6);
+  background-color: #c095ddbb;
+  border: 3px solid #a335ee;
 }
 
 .buyed p {
-  color: grey;
+  color: rgba(51, 47, 47, 0.76);
+  opacity: 0.8;
+}
+.text {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  line-height: 1.1;
+}
+
+.text p:nth-child(1) {
+  font-size: 1rem;
+  font-weight: bold;
+}
+.text p:nth-child(2) {
+  font-size: 0.9rem;
+}
+.text p:nth-child(3) {
+  font-size: 0.75rem;
+}
+
+.button {
+  color: #00a8e8;
+  cursor: pointer;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.buyed {
+  cursor: not-allowed;
+}
+
+.button p {
+  color: #00a8e8;
 }

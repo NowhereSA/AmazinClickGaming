@@ -16,11 +16,7 @@ const ClickerMenu = () => {
       <div className={styles.clickerContainer}>
         <p className={styles.text}>Quantidade de Cliks:</p>
         <p className={styles.clicks}>{state.clicks}</p>
-        {state.message && (
-          <div className={styles.upgrade}>
-            <p>{state.message}</p>
-          </div>
-        )}
+        {state.message && <p className={styles.upgrade}>{state.message}</p>}
       </div>
       <div className={styles.buttonContainer}>
         <div onClick={() => dispatch({ type: "CLICK" })}>

@@ -10,11 +10,11 @@
   border-radius: 5px;
 }
 .clickerContainer {
-  height: 30vh;
+  height: 35vh;
   width: 50vh;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   gap: 20px;
 }
@@ -32,10 +32,8 @@
   border: 1px solid grey;
   border: 1px solid #2ecc71;
   display: inline-block;
-  position: relative;
-  bottom: 10px;
 }
-.upgrade p {
+.upgrade {
   color: #2ecc71;
   padding: 5px 15px;
 }
@@ -46,6 +44,7 @@
   align-items: center;
   flex-direction: column;
   cursor: pointer;
+  flex: 1;
 }
 
 .buttonContainer div {
