@@ -29,7 +29,7 @@ Este projeto foi construído utilizando as seguintes ferramentas:
 1. **Clone o repositório:**
 
    ```bash
-   git clone [https://github.com/nowheresa/amazingclickgaming.git](https://github.com/nowheresa/amazingclickgaming.git)
+   git clone https://github.com/NowhereSA/AmazinClickGaming.git
    ```
 
    1.1 Entre na pasta:
