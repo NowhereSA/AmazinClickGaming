@@ -1,0 +1,23 @@
+.coisasContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  width: auto;
+  height: auto;
+  flex-wrap: wrap;
+}
+
+.categoryContainer {
+  background-color: #1c1c1c;
+  margin-left: 10px;
+  border-radius: 5px;
+}
+
+.itens div {
+  margin: 10px;
+}
+
+.titleItem {
+  text-align: center;
+  color: aqua;
+}

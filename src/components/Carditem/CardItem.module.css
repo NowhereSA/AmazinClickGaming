@@ -1,0 +1,33 @@
+.cardItem,
+.cardBuyed {
+  border: 3px solid rgb(26, 139, 180);
+  box-shadow: 0 0 5px rgba(26, 139, 180, 0.4);
+  border-radius: 10px;
+  text-align: center;
+}
+.cardItem,
+.cardBuyed {
+  height: 200px;
+  width: 200px;
+}
+
+.button,
+.isBuyed {
+  display: flex;
+  justify-content: center;
+}
+.button p {
+  color: #00a8e8;
+}
+
+.cardBuyed {
+  background-color: rgba(51, 47, 47, 0.76);
+}
+
+.cardBuyed p {
+  color: antiquewhite;
+}
+
+.buyed p {
+  color: grey;
+}

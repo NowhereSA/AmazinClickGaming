@@ -1,0 +1,63 @@
+.mainContainer {
+  background-color: #1c1c1c;
+  height: auto;
+  width: auto;
+  display: flex;
+  flex-direction: row;
+  margin-left: 10px;
+  margin-bottom: 10px;
+  margin-top: 0;
+  border-radius: 5px;
+}
+.clickerContainer {
+  height: 30vh;
+  width: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.text {
+  color: wheat;
+}
+.clicks {
+  color: #e26111;
+  flex: 1;
+  font-size: 2rem;
+}
+.upgrade {
+  border-radius: 10px;
+  border: 1px solid grey;
+  border: 1px solid #2ecc71;
+  display: inline-block;
+  position: relative;
+  bottom: 10px;
+}
+.upgrade p {
+  color: #2ecc71;
+  padding: 5px 15px;
+}
+
+.buttonContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.buttonContainer div {
+  border: #e26111 2px solid;
+  border-radius: 15px;
+  box-shadow: 0 0 5px rgb(255, 140, 56, 0.4);
+  text-align: center;
+  height: 150px;
+  width: 150px;
+}
+
+.buttonContainer div p {
+  padding: 5px;
+  color: #e26111;
+}
