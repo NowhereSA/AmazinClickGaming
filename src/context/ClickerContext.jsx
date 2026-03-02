@@ -3,13 +3,35 @@ import { createContext, useReducer, useState } from "react";
 const INITIAL_STATE = {
   clickValue: 1,
   clicks: 0,
-  upgrades: {
-    M2: false,
-    M5: false,
-    M6: false,
-    M10: false,
-    M20: false,
-    M1000: false,
+  initialUpgrades: {
+    mouse_gamer: {
+      name: "Mouse de Bolinha",
+      custo: 50,
+      multi: 2,
+      acquired: false,
+      desc: "Mouse gamer raiz. Click + 2.",
+    },
+    cafe_ads: {
+      name: "Café Requentado",
+      custo: 200,
+      multi: 5,
+      acquired: false,
+      desc: "Energia de ruindade. Clique + 5.",
+    },
+    teclado_mecanico: {
+      name: "Teclado RGB",
+      custo: 600,
+      multi: 12,
+      acquired: false,
+      desc: "Aumenta o muito o FPS. Clique + 12.",
+    },
+    placa_video: {
+      name: "GT 1030",
+      custo: 1500,
+      multi: 30,
+      acquired: false,
+      desc: "Meus clicks vão rodar até sua mãe. Clique + 30.",
+    },
   },
 
   message: "",
@@ -28,9 +50,9 @@ const upgradeAdded = (state, custo, newMulti, upgradeKey) => {
       ...state,
       clicks: state.clicks - custo,
       clickValue: newMulti + state.clickValue,
-      upgrades: {
-        ...state.upgrades,
-        [upgradeKey]: true,
+      initialUpgrades: {
+        ...state.initialUpgrades,
+        [upgradeKey]: { ...state.initialUpgrades[upgradeKey], acquired: true },
       },
       message: "Upgrade feito com sucesso!",
     };
@@ -43,19 +65,10 @@ export const ClickerItensContext = createContext();
 
 export const ClickerProvider = ({ children }) => {
   const reducer = (state, action) => {
+    const item = state.initialUpgrades[action.upgradeKey];
     switch (action.type) {
-      case "M2":
-        return upgradeAdded(state, 50, 2, "M2");
-      case "M5":
-        return upgradeAdded(state, 150, 5, "M5");
-      case "M6":
-        return upgradeAdded(state, 600, 6, "M6");
-      case "M10":
-        return upgradeAdded(state, 1500, 20, "M10");
-      case "M20":
-        return upgradeAdded(state, 1700, 100, "M20");
-      case "M1000":
-        return upgradeAdded(state, 6500, 1000, "M1000");
+      case "BUY_UPGRADE":
+        return upgradeAdded(state, item.custo, item.multi, action.upgradeKey);
       case "CLICK":
         return {
           ...state,
