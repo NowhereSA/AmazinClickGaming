@@ -1,7 +1,7 @@
 import { createContext, useReducer, useState } from "react";
 
 const INITIAL_STATE = {
-  clickValue: 1000,
+  clickValue: 5,
   clicks: 0,
   initialUpgrades: {
     mouse_gamer: {
@@ -43,7 +43,7 @@ const INITIAL_STATE = {
       custo: 250,
       multi: 5,
       acquired: false,
-      desc: "Organização é tudo. Cliques valem +5.",
+      desc: "Organização é tudo. Clique + 5.",
       type: "uncommon",
     },
     internet_fibra: {
@@ -51,7 +51,7 @@ const INITIAL_STATE = {
       custo: 100,
       multi: 2,
       acquired: false,
-      desc: "Bem vindo lag! Cliques valem +2.",
+      desc: "Bem vindo lag! Clique + 2.",
       type: "commom",
     },
     cadeira_gamer: {
@@ -59,7 +59,7 @@ const INITIAL_STATE = {
       custo: 1000,
       multi: 35,
       acquired: false,
-      desc: "Farmou aura. Cliques valem +35.",
+      desc: "Farmou aura. Clique + 35.",
       type: "uncommon",
     },
     teclado_mecanico: {
@@ -67,7 +67,7 @@ const INITIAL_STATE = {
       custo: 2000,
       multi: 45,
       acquired: false,
-      desc: "Cliques valem +45.",
+      desc: "Clique + 45.",
       type: "uncommun",
     },
     gpu_raytracing: {
@@ -75,7 +75,7 @@ const INITIAL_STATE = {
       custo: 6000,
       multi: 120,
       acquired: false,
-      desc: "Gráficos no ultra. Cliques valem +120.",
+      desc: "Gráficos no ultra. Clique + 120.",
       type: "rare",
     },
     ia_assistente: {
@@ -83,23 +83,23 @@ const INITIAL_STATE = {
       custo: 15000,
       multi: 350,
       acquired: false,
-      desc: "Quebra o código. Cliques valem +350.",
+      desc: "Quebra o código. Clique + 350.",
       type: "rare",
     },
     super_computador: {
       name: "Notebook da Positivo",
-      custo: 1,
-      multi: 1.5,
+      custo: 1200,
+      multi: 1200,
       acquired: false,
-      desc: "Sem comentarios. Cliques 1.5x.",
+      desc: "Sem comentarios. Clique + 1200.",
       type: "legendary",
     },
     neuralink: {
       name: "DAVI JONES",
-      custo: 1,
-      multi: 2,
+      custo: 50000,
+      multi: 5000,
       acquired: false,
-      desc: "É O WESKER?. Cliques valem 2x.",
+      desc: "É O WESKER?. Clique + 5000.",
       type: "legendary",
     },
     canetaAzul: {
@@ -107,7 +107,7 @@ const INITIAL_STATE = {
       custo: 500,
       multi: 10,
       acquired: false,
-      desc: "Azul caneta, caneta azul! Cliques valem +10.",
+      desc: "Azul caneta, caneta azul! Clique + 10.",
       type: "common",
     },
 
@@ -116,16 +116,16 @@ const INITIAL_STATE = {
       custo: 5000,
       multi: 150,
       acquired: false,
-      desc: "Você não vale nada, você vale tudo! Cliques valem +150.",
+      desc: "Você não vale nada, você vale tudo! Clique + 150.",
       type: "uncommon",
     },
 
     vovoInvestidor: {
-      name: "VOVÔ DO BITCOIN",
-      custo: 25000,
-      multi: 800,
+      name: "BITCOIN",
+      custo: 21000,
+      multi: 1000,
       acquired: false,
-      desc: "Comprei na alta, vendi na baixa. Cliques valem +800.",
+      desc: "Comprei na alta, vendi na baixa. Clique + 1000.",
       type: "rare",
     },
 
@@ -134,25 +134,25 @@ const INITIAL_STATE = {
       custo: 1000,
       multi: -5, // Um upgrade que na verdade é um bait kkkk
       acquired: false,
-      desc: "O Windows está atualizando... Cliques valem -5.",
+      desc: "O Windows está atualizando... Clique - 5.",
       type: "common",
     },
 
     jailsonMendes: {
       name: "PAI DE FAMÍLIA",
-      custo: 1,
-      multi: 3.5,
+      custo: 35000,
+      multi: 3500,
       acquired: false,
-      desc: "Ai, que delícia, cara! Clique x 3.5.",
+      desc: "Ai, que delícia, cara! Clique + 3500.",
       type: "legendary",
     },
 
     ratinho: {
       name: "RATINHOOO",
-      custo: 1,
+      custo: 12000,
       multi: 1200,
       acquired: false,
-      desc: "Rapaz!!. Cliques valem +1200.",
+      desc: "Rapaz!!. Cliques + 1200.",
       type: "rare",
     },
   },

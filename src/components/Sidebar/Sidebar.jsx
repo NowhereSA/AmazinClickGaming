@@ -29,31 +29,12 @@ const Sidebar = () => {
           <div className={styles.sideIcon} onClick={(e) => handleClick(e, "")}>
             <p className={styles.icon}>Initial Page</p>
           </div>
-
-          <div
-            className={styles.sideIcon}
-            onClick={(e) => handleClick(e, "clicker")}
-          >
-            <p className={styles.icon}>
-              <GiAk47U color="white" size={28} /> Clicker Factory
-            </p>
-          </div>
-
           <div
             className={styles.sideIcon}
             onClick={(e) => handleClick(e, "store")}
           >
             <p className={styles.icon}>
               <SlDiamond color="white" size={28} /> Store
-            </p>
-          </div>
-
-          <div
-            className={styles.sideIcon}
-            onClick={(e) => handleClick(e, "rebirth")}
-          >
-            <p className={styles.icon}>
-              <GiLifeBar color="white" size={28} /> Rebirth
             </p>
           </div>
         </div>
